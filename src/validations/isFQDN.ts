@@ -4,7 +4,7 @@ type FQDNOptions = {
   /**
    * @default true
    */
-  requireTld?: boolean;
+  requireTLD?: boolean;
 
   /**
    * @default false
@@ -18,7 +18,7 @@ type FQDNOptions = {
 };
 
 const defaultFQDNOptions: FQDNOptions = {
-  requireTld: true,
+  requireTLD: true,
   allowUnderscores: false,
   allowTrailingDot: false,
 };
@@ -40,7 +40,7 @@ export const isFQDN = (str: string, options?: FQDNOptions) => {
     }
   }
 
-  if (options.requireTld) {
+  if (options.requireTLD) {
     const tld = parts.pop() as string;
 
     if (

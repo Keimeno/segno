@@ -30,7 +30,7 @@ type EmailOptions = {
    *
    * @default true
    */
-  requireTld?: boolean;
+  requireTLD?: boolean;
 
   /**
    * If set to `true`, the validator will not check for the standard max length of an email.
@@ -59,7 +59,7 @@ const defaultEmailOptions: EmailOptions = {
   allowDisplayName: false,
   requireDisplayName: false,
   allowUTF8LocalPart: true,
-  requireTld: true,
+  requireTLD: true,
   ignoreMaxLength: false,
   allowIpDomain: false,
   domainSpecificValidation: false,
@@ -183,7 +183,7 @@ export const isEmail = (email: string, options?: EmailOptions) => {
     return false;
   }
 
-  if (!isFQDN(domain, { requireTld: options.requireTld })) {
+  if (!isFQDN(domain, { requireTLD: options.requireTLD })) {
     if (!options.allowIpDomain) {
       return false;
     }
