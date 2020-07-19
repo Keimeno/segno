@@ -91,7 +91,7 @@ Deno.test(
   () => {
     test({
       validator: 'isEmail',
-      args: [{ allowUtf8LocalPart: false }],
+      args: [{ allowUTF8LocalPart: false }],
       valid: [
         'foo@bar.com',
         'x@x.au',

@@ -23,7 +23,7 @@ type EmailOptions = {
    *
    * @default true
    */
-  allowUtf8LocalPart?: boolean;
+  allowUTF8LocalPart?: boolean;
 
   /**
    * If set to `false`, e-mail addresses without having TLD in their domain will also be matched.
@@ -58,7 +58,7 @@ type EmailOptions = {
 const defaultEmailOptions: EmailOptions = {
   allowDisplayName: false,
   requireDisplayName: false,
-  allowUtf8LocalPart: true,
+  allowUTF8LocalPart: true,
   requireTld: true,
   ignoreMaxLength: false,
   allowIpDomain: false,
@@ -203,13 +203,13 @@ export const isEmail = (email: string, options?: EmailOptions) => {
 
   if (user[0] === '"') {
     user = user.slice(1, user.length - 1);
-    return options.allowUtf8LocalPart
+    return options.allowUTF8LocalPart
       ? quotedEmailUserUtf8.test(user)
       : quotedEmailUser.test(user);
   }
 
   const userParts = user.split('.');
-  const pattern = options.allowUtf8LocalPart
+  const pattern = options.allowUTF8LocalPart
     ? emailUserUtf8Part
     : emailUserPart;
 
