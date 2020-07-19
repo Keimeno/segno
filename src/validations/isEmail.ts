@@ -44,7 +44,7 @@ type EmailOptions = {
    *
    * @default false
    */
-  allowIpDomain?: boolean;
+  allowIPDomain?: boolean;
 
   /**
    * If set to `true`, some additional validation will be enabled,
@@ -61,7 +61,7 @@ const defaultEmailOptions: EmailOptions = {
   allowUTF8LocalPart: true,
   requireTLD: true,
   ignoreMaxLength: false,
-  allowIpDomain: false,
+  allowIPDomain: false,
   domainSpecificValidation: false,
 };
 
@@ -184,7 +184,7 @@ export const isEmail = (email: string, options?: EmailOptions) => {
   }
 
   if (!isFQDN(domain, { requireTLD: options.requireTLD })) {
-    if (!options.allowIpDomain) {
+    if (!options.allowIPDomain) {
       return false;
     }
 

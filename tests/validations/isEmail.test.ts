@@ -232,7 +232,7 @@ Deno.test('should validate email addresses with required display names', () => {
 Deno.test('should validate email addresses with allowed IPs', () => {
   test({
     validator: 'isEmail',
-    args: [{ allowIpDomain: true }],
+    args: [{ allowIPDomain: true }],
     valid: ['email@[123.123.123.123]', 'email@255.255.255.255'],
     invalid: ['email@0.0.0.256', 'email@26.0.0.256', 'email@[266.266.266.266]'],
   });
