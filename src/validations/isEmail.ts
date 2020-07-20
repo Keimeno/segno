@@ -1,4 +1,4 @@
-import { assertString } from '../util/assertString.ts';
+import { assertString } from '../helpers/assertString.ts';
 import { isByteLength } from './isByteLength.ts';
 import { isFQDN } from './isFQDN.ts';
 import { isIP } from './isIP.ts';

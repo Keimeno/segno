@@ -1,4 +1,4 @@
-import { assertString } from '../util/assertString.ts';
+import { assertString } from '../helpers/assertString.ts';
 
 type ByteLengthOptions = {
   /**
