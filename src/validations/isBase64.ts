@@ -11,7 +11,7 @@ const defaultBase64Options: Base64Options = {
   urlSafe: false,
 };
 
-export default function isBase64(str: string, options?: Base64Options) {
+export const isBase64 = (str: string, options?: Base64Options) => {
   assertString(str);
   options = {
     ...defaultBase64Options,
@@ -34,4 +34,4 @@ export default function isBase64(str: string, options?: Base64Options) {
     firstPaddingChar === len - 1 ||
     (firstPaddingChar === len - 2 && str[len - 1] === '=')
   );
-}
+};

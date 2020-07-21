@@ -1,5 +1,5 @@
 import { assertString } from '../helpers/assertString.ts';
-import isBase64 from './isBase64.ts';
+import { isBase64 } from './isBase64.ts';
 
 export const isJWT = (str: string) => {
   assertString(str);

@@ -10,7 +10,7 @@ type FloatOptions = {
   gt?: number;
 };
 
-export default function isFloat(str: string, options?: FloatOptions) {
+export const isFloat = (str: string, options?: FloatOptions) => {
   assertString(str);
   options = options || {};
   const float = new RegExp(
@@ -31,6 +31,6 @@ export default function isFloat(str: string, options?: FloatOptions) {
     (!options.lt || value < options?.lt) &&
     (!options.gt || value > options?.gt)
   );
-}
+};
 
 export const decimalLocales = Object.keys(decimal);
