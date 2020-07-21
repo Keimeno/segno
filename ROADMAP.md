@@ -1,5 +1,9 @@
 This roadmap is a living document, and it is likely that priorities will change, but the items below should give some indication of our planned changes for this calendar year.
 
+## Stable Release
+
+The first stable release is planned before 2020-08-30.
+
 ## Updates
 
 Updates will occur regulary, an overview will come soon.
