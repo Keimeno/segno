@@ -31,5 +31,5 @@ export const isCreditCard = (str: string) => {
     }
     shouldDouble = !shouldDouble;
   }
-  return (sum % 10 === 0 ? sanitized : false) as boolean;
+  return !!(sum % 10 === 0 ? sanitized : false);
 };
