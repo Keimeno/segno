@@ -1,9 +1,9 @@
 {
   "name": "segno",
   "description": "segno (Segnosaurus). Validation library for Deno. Enforcing a high security standard.",
+  "version": "0.3.0",
   "unlisted": false,
   "stable": false,
-  "version": "0.3.0",
   "entry": "./mod.ts",
   "repository": "https://github.com/Keimeno/segno",
   "files": ["./mod.ts", "./lib/**/*", "./README.md"]
