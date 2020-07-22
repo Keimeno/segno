@@ -166,7 +166,7 @@ const validators = {
     }
     return sum % 10 === 0;
   },
-  'ar-TN': (str) => {
+  'ar-TN': (str: string) => {
     const DNI = /^\d{8}$/;
 
     // sanitize user input

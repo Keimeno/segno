@@ -1,7 +1,7 @@
-import * as segno from './src/index.ts';
+import * as segno from './lib/index.ts';
 
 // exporting all functions
-export * from './src/index.ts';
+export * from './lib/index.ts';
 
 // exporting functions namespaced to segno
 export { segno };
