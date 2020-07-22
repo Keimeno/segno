@@ -15,7 +15,7 @@ const zip = (date: string[], format: string[]) => {
   return zippedArr;
 };
 
-export const isDate = (input: string, format = 'YYYY/MM/DD') => {
+export const isDate = (input: any, format = 'YYYY/MM/DD') => {
   if (typeof input === 'string' && isValidFormat(format)) {
     const splitter = /[-/]/;
     const dateAndFormat = zip(
@@ -39,7 +39,6 @@ export const isDate = (input: string, format = 'YYYY/MM/DD') => {
   }
 
   return (
-    Object.prototype.toString.call(input) === '[object Date]' &&
-    isFinite(parseInt(input))
+    Object.prototype.toString.call(input) === '[object Date]' && isFinite(input)
   );
 };
