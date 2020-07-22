@@ -17,16 +17,20 @@ export const isInt = (str: string, options?: IntOptions) => {
 
   // Get the regex to use for testing, based on whether
   // leading zeroes are allowed or not.
-  let regex =
+  const regex =
     options.hasOwnProperty('allowLeadingZeroes') && !options.allowLeadingZeroes
       ? int
       : intLeadingZeroes;
 
   // Check min/max/lt/gt
-  let minCheckPassed = !options.min || +str >= options.min;
-  let maxCheckPassed = !options.max || +str <= options.max;
-  let ltCheckPassed = !options.lt || +str < options.lt;
-  let gtCheckPassed = !options.gt || +str > options.gt;
+  // @ts-ignore
+  const minCheckPassed = !options.hasOwnProperty('min') || +str >= options.min;
+  // @ts-ignore
+  const maxCheckPassed = !options.hasOwnProperty('max') || +str <= options.max;
+  // @ts-ignore
+  const ltCheckPassed = !options.hasOwnProperty('lt') || +str < options.lt;
+  // @ts-ignore
+  const gtCheckPassed = !options.hasOwnProperty('gt') || +str > options.gt;
 
   return (
     regex.test(str) &&
