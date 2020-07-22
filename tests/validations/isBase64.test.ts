@@ -47,33 +47,9 @@ Deno.test('should validate base64 strings', () => {
       ' AA',
       '\tAA',
       '\rAA',
-      '',
-      '\nAA',
-      'This+isa/bad+base64Url==',
-      '0K3RgtC+INC30LDQutC+0LTQuNGA0L7QstCw0L3QvdCw0Y8g0YHRgtGA0L7QutCw',
-    ],
-    error: [null, undefined, {}, [], 42],
-  });
-});
-
-Deno.test('should validate base64URL', () => {
-  test({
-    validator: 'isBase64',
-    args: [{ urlSafe: true }],
-    valid: [
-      'bGFkaWVzIGFuZCBnZW50bGVtZW4sIHdlIGFyZSBmbG9hdGluZyBpbiBzcGFjZQ',
-      '1234',
-      'bXVtLW5ldmVyLXByb3Vk',
-      'PDw_Pz8-Pg',
-      'VGhpcyBpcyBhbiBlbmNvZGVkIHN0cmluZw',
-    ],
-    invalid: [
-      ' AA',
-      '\tAA',
-      '\rAA',
-      '\nAA',
       '123=',
       '',
+      '\nAA',
       'This+isa/bad+base64Url==',
       '0K3RgtC+INC30LDQutC+0LTQuNGA0L7QstCw0L3QvdCw0Y8g0YHRgtGA0L7QutCw',
     ],
