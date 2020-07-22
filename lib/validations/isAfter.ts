@@ -7,5 +7,7 @@ export const isAfter = (str: string, date = String(new Date())) => {
   const comparison = toDate(date);
   const original = toDate(str);
 
-  return (original && comparison && original > comparison) as boolean;
+  // this is against standardx and gts but it converts it into a boolean
+  // cannot use the toBoolean method here, as it expects a string
+  return !!(original && comparison && original > comparison);
 };
