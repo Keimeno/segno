@@ -1,4 +1,4 @@
-import { assertString } from '../helpers/assertString.ts';
+import { assertString } from './assertString.ts';
 
 export const blacklist = (str: string, chars: string) => {
   assertString(str);

@@ -1,4 +1,4 @@
-import { assertString } from '../helpers/assertString.ts';
+import { assertString } from './assertString.ts';
 
 export const escape = (str: string) => {
   assertString(str);

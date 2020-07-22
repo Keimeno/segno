@@ -1,5 +1,5 @@
-import { assertString } from '../helpers/assertString.ts';
-import { toString } from '../helpers/toString.ts';
+import { assertString } from './assertString.ts';
+import { toString } from './toString.ts';
 
 type ContainsOptions = {
   ignoreCase?: boolean;
