@@ -10,8 +10,8 @@ type CurrencyOptions = {
   negativeSignBeforeDigits?: boolean;
   negativeSignAfterDigits?: boolean;
   allowNegativeSignPlaceholder?: boolean;
-  thousandsSeperator?: string;
-  decimalSeperator?: string;
+  thousandsSeparator?: string;
+  decimalSeparator?: string;
   allowDecimal?: boolean;
   requireDecimal?: boolean;
   digitsAfterDecimal?: number[];
@@ -29,14 +29,14 @@ const currencyRegex = (options: Required<CurrencyOptions>) => {
     }`,
     negative = '-?',
     whole_dollar_amount_without_sep = '[1-9]\\d*',
-    whole_dollar_amount_with_sep = `[1-9]\\d{0,2}(\\${options.thousandsSeperator}\\d{3})*`,
+    whole_dollar_amount_with_sep = `[1-9]\\d{0,2}(\\${options.thousandsSeparator}\\d{3})*`,
     valid_whole_dollar_amounts = [
       '0',
       whole_dollar_amount_without_sep,
       whole_dollar_amount_with_sep,
     ],
     whole_dollar_amount = `(${valid_whole_dollar_amounts.join('|')})?`,
-    decimal_amount = `(\\${options.decimalSeperator}(${decimalDigits}))${
+    decimal_amount = `(\\${options.decimalSeparator}(${decimalDigits}))${
       options.requireDecimal ? '' : '?'
     }`;
 
@@ -93,8 +93,8 @@ const defaultCurrencyOptions: CurrencyOptions = {
   negativeSignBeforeDigits: false,
   negativeSignAfterDigits: false,
   allowNegativeSignPlaceholder: false,
-  thousandsSeperator: ',',
-  decimalSeperator: '.',
+  thousandsSeparator: ',',
+  decimalSeparator: '.',
   allowDecimal: true,
   requireDecimal: false,
   digitsAfterDecimal: [2],
