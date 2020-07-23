@@ -1,0 +1,36 @@
+name: Build Docs and Publish
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+        fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+    - uses: actions/setup-node@v2.1.1
+      with:
+        node-version: '12'
+    - name: Build Documentation
+      run: |
+        npm i -g typedoc
+        npm i -g typescript
+        typedoc --out docs .\lib\validations\ --tsconfig .\tsconfig.json --name segno --readme ./README.md --mode file --theme minimal
+        echo "segno.js.org" >> ./docs/CNAME
+    - name: Publish Documentation
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add ./docs
+        git commit -m "built docs"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
