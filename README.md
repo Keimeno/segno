@@ -13,7 +13,7 @@ console.log(isIP('127.0.0.1')); // true
 
 ## Documentation
 
-A detailed documentation will follow. For now please visit the [validator.js docs](https://github.com/validatorjs/validator.js#validators). However, keep in mind that EVERYTHING was converted to camelCase. Meaning all options must be written in camelCase. Also; not all functions may be exactly implemented as described there.
+A documentation is currently still WIP. But please check our website https://segno.js.org for now.
 
 ## License
 
