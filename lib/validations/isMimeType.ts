@@ -27,12 +27,21 @@ import { assertString } from '../helpers/assertString.ts';
 // NB :
 //   Subtype length must not exceed 100 characters.
 //   This rule does not comply to the RFC specs (what is the max length ?).
+/**
+ * @ignore
+ */
 const mimeTypeSimple = /^(application|audio|font|image|message|model|multipart|text|video)\/[a-zA-Z0-9\.\-\+]{1,100}$/i; // eslint-disable-line max-len
 
 // Handle "charset" in "text/*"
+/**
+ * @ignore
+ */
 const mimeTypeText = /^text\/[a-zA-Z0-9\.\-\+]{1,100};\s?charset=("[a-zA-Z0-9\.\-\+\s]{0,70}"|[a-zA-Z0-9\.\-\+]{0,70})(\s?\([a-zA-Z0-9\.\-\+\s]{1,20}\))?$/i; // eslint-disable-line max-len
 
 // Handle "boundary" in "multipart/*"
+/**
+ * @ignore
+ */
 const mimeTypeMultipart = /^multipart\/[a-zA-Z0-9\.\-\+]{1,100}(;\s?(boundary|charset)=("[a-zA-Z0-9\.\-\+\s]{0,70}"|[a-zA-Z0-9\.\-\+]{0,70})(\s?\([a-zA-Z0-9\.\-\+\s]{1,20}\))?){0,2}$/i; // eslint-disable-line max-len
 
 export const isMimeType = (str: string) => {

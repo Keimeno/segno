@@ -1,10 +1,19 @@
 // @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
+/**
+ * @ignore
+ */
 const validMediaType = /^[a-z]+\/[a-z0-9\-\+]+$/i;
 
+/**
+ * @ignore
+ */
 const validAttribute = /^[a-z\-]+=[a-z0-9\-]+$/i;
 
+/**
+ * @ignore
+ */
 const validData = /^[a-z0-9!\$&'\(\)\*\+,;=\-\._~:@\/\?%\s]*$/i;
 
 export const isDataURI = (str: string) => {

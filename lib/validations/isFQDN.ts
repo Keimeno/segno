@@ -18,6 +18,9 @@ type FQDNOptions = {
   allowTrailingDot?: boolean;
 };
 
+/**
+ * @ignore
+ */
 const defaultFQDNOptions: FQDNOptions = {
   requireTLD: true,
   allowUnderscores: false,

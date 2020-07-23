@@ -16,7 +16,13 @@ import { assertString } from '../helpers/assertString.ts';
  * and Regular Expression for valid EANs (EAN-8, EAN-13),
  * with exact numberic matching of 8 or 13 digits [0-9]
  */
+/**
+ * @ignore
+ */
 const LENGTH_EAN_8 = 8;
+/**
+ * @ignore
+ */
 const validEanRegex = /^(\d{8}|\d{13})$/;
 
 /**

@@ -1,10 +1,29 @@
 // @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
+/**
+ * @ignore
+ */
 const macAddress = /^([0-9a-fA-F][0-9a-fA-F]:){5}([0-9a-fA-F][0-9a-fA-F])$/;
+
+/**
+ * @ignore
+ */
 const macAddressNoColons = /^([0-9a-fA-F]){12}$/;
+
+/**
+ * @ignore
+ */
 const macAddressWithHyphen = /^([0-9a-fA-F][0-9a-fA-F]-){5}([0-9a-fA-F][0-9a-fA-F])$/;
+
+/**
+ * @ignore
+ */
 const macAddressWithSpaces = /^([0-9a-fA-F][0-9a-fA-F]\s){5}([0-9a-fA-F][0-9a-fA-F])$/;
+
+/**
+ * @ignore
+ */
 const macAddressWithDots = /^([0-9a-fA-F]{4}).([0-9a-fA-F]{4}).([0-9a-fA-F]{4})$/;
 
 type MACAddressOptions = {

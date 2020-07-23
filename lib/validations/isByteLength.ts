@@ -13,6 +13,9 @@ type ByteLengthOptions = {
   max?: number;
 };
 
+/**
+ * @ignore
+ */
 const defaultByteLengthOptions: ByteLengthOptions = {
   min: 0,
 };

@@ -1,7 +1,14 @@
 // @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
+/**
+ * @ignore
+ */
 const int = /^(?:[-+]?(?:0|[1-9][0-9]*))$/;
+
+/**
+ * @ignore
+ */
 const intLeadingZeroes = /^[-+]?[0-9]+$/;
 
 type IntOptions = {

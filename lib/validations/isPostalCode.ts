@@ -2,9 +2,24 @@
 import { assertString } from '../helpers/assertString.ts';
 
 // common patterns
+/**
+ * @ignore
+ */
 const threeDigit = /^\d{3}$/;
+
+/**
+ * @ignore
+ */
 const fourDigit = /^\d{4}$/;
+
+/**
+ * @ignore
+ */
 const fiveDigit = /^\d{5}$/;
+
+/**
+ * @ignore
+ */
 const sixDigit = /^\d{6}$/;
 
 type PostalCode =
@@ -63,6 +78,9 @@ type PostalCode =
   | 'ZM'
   | 'any';
 
+/**
+ * @ignore
+ */
 const patterns = {
   AD: /^AD\d{3}$/,
   AT: fourDigit,

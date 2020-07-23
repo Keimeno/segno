@@ -1,7 +1,14 @@
 // @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
+/**
+ * @ignore
+ */
 let imeiRegexWithoutHypens = /^[0-9]{15}$/;
+
+/**
+ * @ignore
+ */
 let imeiRegexWithHypens = /^\d{2}-\d{6}-\d{6}-\d{1}$/;
 
 type IMEIOptions = {

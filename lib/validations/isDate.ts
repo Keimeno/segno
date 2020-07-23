@@ -1,9 +1,15 @@
+/**
+ * @ignore
+ */
 const isValidFormat = (format: string) => {
   return /(^(y{4}|y{2})[\/-](m{1,2})[\/-](d{1,2})$)|(^(m{1,2})[\/-](d{1,2})[\/-]((y{4}|y{2})$))|(^(d{1,2})[\/-](m{1,2})[\/-]((y{4}|y{2})$))/gi.test(
     format
   );
 };
 
+/**
+ * @ignore
+ */
 const zip = (date: string[], format: string[]) => {
   const zippedArr = [];
   const len = Math.min(date.length, format.length);

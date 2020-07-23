@@ -5,6 +5,9 @@ type IsEmptyOptions = {
   ignoreWhitespace?: boolean;
 };
 
+/**
+ * @ignore
+ */
 const defaultIsEmptyOptions: IsEmptyOptions = {
   ignoreWhitespace: false,
 };

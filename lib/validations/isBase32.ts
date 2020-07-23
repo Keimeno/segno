@@ -1,6 +1,9 @@
 // @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
+/**
+ * @ignore
+ */
 const base32 = /^[A-Z2-7]+=*$/;
 
 export const isBase32 = (str: string) => {

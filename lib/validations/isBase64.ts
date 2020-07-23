@@ -1,13 +1,23 @@
 // @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
+/**
+ * @ignore
+ */
 const notBase64 = /[^A-Z0-9+\/=]/i;
+
+/**
+ * @ignore
+ */
 const urlSafeBase64 = /^[A-Z0-9_\-]+$/i;
 
 type Base64Options = {
   urlSafe?: boolean;
 };
 
+/**
+ * @ignore
+ */
 const defaultBase64Options: Base64Options = {
   urlSafe: false,
 };
