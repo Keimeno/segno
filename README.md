@@ -4,7 +4,7 @@ segno (Segnosaurus). Validation library for Deno 🦕. Enforcing a high security
 
 ## Notice
 
-This library will be partially ported from [validator.js](https://github.com/validatorjs/validator.js), please check their [license](https://github.com/validatorjs/validator.js/tree/master/LICENSE).
+This library is partially ported from [validator.js](https://github.com/validatorjs/validator.js), please check their [license](https://github.com/validatorjs/validator.js/tree/master/LICENSE).
 
 ## Example
 
