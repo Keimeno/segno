@@ -33,6 +33,9 @@ const validEanRegex = /^(\d{8}|\d{13})$/;
  * @param {number} index
  * @return {number}
  */
+/**
+ * @ignore
+ */
 const getPositionWeightThroughLengthAndIndex = (
   length: number,
   index: number
@@ -50,6 +53,9 @@ const getPositionWeightThroughLengthAndIndex = (
  *
  * @param {string} ean
  * @return {number}
+ */
+/**
+ * @ignore
  */
 const calculateCheckDigit = (ean: string) => {
   const checksum = ean
