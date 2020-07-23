@@ -1,8 +1,6 @@
 name: Build Docs and Publish
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
     branches: [ master ]
   workflow_dispatch:
