@@ -4,6 +4,7 @@ on:
   pull_request:
     branches: [ master ]
   workflow_dispatch:
+    branches: [ master ]
 
 jobs:
   build:
@@ -20,7 +21,7 @@ jobs:
       run: |
         npm i -g typedoc
         npm i -g typescript
-        typedoc --out docs .\lib\validations\ --tsconfig .\tsconfig.json --name segno --readme ./README.md --mode file --theme minimal
+        typedoc --out docs ./lib/validations/ --tsconfig ./tsconfig.json --name segno --readme ./README.md --mode file --theme minimal
         echo "segno.js.org" >> ./docs/CNAME
     - name: Publish Documentation
       run: |
