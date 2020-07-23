@@ -154,7 +154,7 @@ export const validateDisplayName = (displayName: string) => {
  * import {segno} from 'https://deno.land/x/segno/mod.ts';
  *
  * segno.isEmail('foo@bar.com'); // true
- * segno.isEmail('multiple..dots@stillinvalid.com'); // true
+ * segno.isEmail('multiple..dots@stillinvalid.com'); // false
  * ```
  */
 export const isEmail = (email: string, options?: EmailOptions) => {
