@@ -30,6 +30,9 @@ type URLOptions = {
   hostBlacklist?: boolean;
 };
 
+/**
+ * @ignore
+ */
 const defaultURLOptions = {
   protocols: ['http', 'https', 'ftp'],
   requireTLD: true,
@@ -41,12 +44,21 @@ const defaultURLOptions = {
   allowProtocolRelativeURLs: false,
 };
 
+/**
+ * @ignore
+ */
 const wrapped_ipv6 = /^\[([^\]]+)\](?::([0-9]+))?$/;
 
+/**
+ * @ignore
+ */
 const isRegExp = (obj: any) => {
   return Object.prototype.toString.call(obj) === '[object RegExp]';
 };
 
+/**
+ * @ignore
+ */
 const checkHost = (host: string, matches: any) => {
   for (let i = 0; i < matches.length; i++) {
     let match = matches[i];

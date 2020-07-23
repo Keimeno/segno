@@ -1,6 +1,9 @@
 // @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
+/**
+ * @ignore
+ */
 const validators = {
   ES: (str: string) => {
     assertString(str);

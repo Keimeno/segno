@@ -16,6 +16,9 @@ type Algorithm =
   | 'crc32'
   | 'crc32b';
 
+/**
+ * @ignore
+ */
 const lengths = {
   md5: 32,
   md4: 32,

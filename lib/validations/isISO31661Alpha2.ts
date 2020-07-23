@@ -4,6 +4,9 @@ import { assertString } from '../helpers/assertString.ts';
 import { includes } from '../helpers/includes.ts';
 
 // from https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+/**
+ * @ignore
+ */
 const validISO31661Alpha2CountriesCodes = [
   'AD',
   'AE',

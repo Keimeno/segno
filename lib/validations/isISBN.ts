@@ -1,8 +1,19 @@
 // @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
+/**
+ * @ignore
+ */
 const isbn10Maybe = /^(?:[0-9]{9}X|[0-9]{10})$/;
+
+/**
+ * @ignore
+ */
 const isbn13Maybe = /^(?:[0-9]{13})$/;
+
+/**
+ * @ignore
+ */
 const factor = [1, 3];
 
 export const isISBN = (str: string, version?: number): boolean => {

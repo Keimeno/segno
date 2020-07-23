@@ -16,7 +16,9 @@ import { assertString } from '../helpers/assertString.ts';
 /**
  * Campus prefixes according to locales
  */
-
+/**
+ * @ignore
+ */
 const campusPrefix = {
   'en-US': {
     andover: ['10', '12'],
@@ -108,6 +110,9 @@ const getPrefixes = (locale: string) => {
 
 // tax id regex formats for various loacles
 
+/**
+ * @ignore
+ */
 const taxIdFormat = {
   'en-US': /^\d{2}[- ]{0,1}\d{7}$/,
 };

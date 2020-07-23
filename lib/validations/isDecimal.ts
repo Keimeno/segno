@@ -11,6 +11,9 @@ type DecimalOptions = {
   locale?: string;
 };
 
+/**
+ * @ignore
+ */
 const decimalRegExp = (options: Required<DecimalOptions>) => {
   const regExp = new RegExp(
     `^[-+]?([0-9]+)?(\\${(decimal as any)[options.locale]}[0-9]{${
@@ -20,12 +23,18 @@ const decimalRegExp = (options: Required<DecimalOptions>) => {
   return regExp;
 };
 
+/**
+ * @ignore
+ */
 const defaultDecimalOptions = {
   forceDecimal: false,
   decimalDigits: '1,',
   locale: 'en-US',
 };
 
+/**
+ * @ignore
+ */
 const blacklist = ['', '-', '+'];
 
 export const isDecimal = (str: string, options?: DecimalOptions) => {

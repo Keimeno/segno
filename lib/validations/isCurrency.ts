@@ -19,6 +19,9 @@ type CurrencyOptions = {
   allowSpaceAfterDigits?: boolean;
 };
 
+/**
+ * @ignore
+ */
 const currencyRegex = (options: Required<CurrencyOptions>) => {
   let decimalDigits = `\\d{${options.digitsAfterDecimal[0]}}`;
   options.digitsAfterDecimal.forEach((digit, index) => {
@@ -84,6 +87,9 @@ const currencyRegex = (options: Required<CurrencyOptions>) => {
   return new RegExp(`^(?!-? )(?=.*\\d)${pattern}$`);
 };
 
+/**
+ * @ignore
+ */
 const defaultCurrencyOptions: CurrencyOptions = {
   symbol: '$',
   requireSymbol: false,

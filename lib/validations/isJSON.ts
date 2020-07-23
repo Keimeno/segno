@@ -5,6 +5,9 @@ type JSONOptions = {
   allowPrimitives?: boolean;
 };
 
+/**
+ * @ignore
+ */
 const defaultJSONOptions = {
   allowPrimitives: false,
 };

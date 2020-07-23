@@ -51,6 +51,9 @@ type CountryCode =
  * https://docs.microsoft.com/en-us/microsoft-365/compliance/eu-passport-number -- EU Passport Number
  * https://countrycode.org/ -- Country Codes
  */
+/**
+ * @ignore
+ */
 const passportRegexByCountryCode = {
   AM: /^[A-Z]{2}\d{7}$/, // ARMENIA
   AR: /^[A-Z]{3}\d{6}$/, // ARGENTINA

@@ -3,6 +3,9 @@ import { assertString } from '../helpers/assertString.ts';
 // @ts-ignore
 import { isIP } from './isIP.ts';
 
+/**
+ * @ignore
+ */
 const subnetMaybe = /^\d{1,2}$/;
 
 export const isIPRange = (str: string) => {
