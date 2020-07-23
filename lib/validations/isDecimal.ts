@@ -1,5 +1,8 @@
+// @ts-ignore
 import { decimal } from '../helpers/alpha.ts';
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
+// @ts-ignore
 import { includes } from '../helpers/includes.ts';
 
 type DecimalOptions = {

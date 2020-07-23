@@ -1,3 +1,4 @@
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
 const isin = /^[A-Z]{2}[0-9A-Z]{9}[0-9]$/;

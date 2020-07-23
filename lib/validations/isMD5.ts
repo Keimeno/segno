@@ -1,3 +1,4 @@
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
 const md5 = /^[a-f0-9]{32}$/;

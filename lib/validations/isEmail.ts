@@ -1,6 +1,10 @@
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
+// @ts-ignore
 import { isByteLength } from './isByteLength.ts';
+// @ts-ignore
 import { isFQDN } from './isFQDN.ts';
+// @ts-ignore
 import { isIP } from './isIP.ts';
 
 type EmailOptions = {
@@ -55,6 +59,9 @@ type EmailOptions = {
   domainSpecificValidation?: boolean;
 };
 
+/**
+ * @ignore
+ */
 const defaultEmailOptions: EmailOptions = {
   allowDisplayName: false,
   requireDisplayName: false,
@@ -65,18 +72,47 @@ const defaultEmailOptions: EmailOptions = {
   domainSpecificValidation: false,
 };
 
+/**
+ * @ignore
+ */
 const splitNameAddress = /^([^\x00-\x1F\x7F-\x9F\cX]+)<(.+)>$/i;
+
+/**
+ * @ignore
+ */
 const emailUserPart = /^[a-z\d!#\$%&'\*\+\-\/=\?\^_`{\|}~]+$/i;
+
+/**
+ * @ignore
+ */
 const gmailUserPart = /^[a-z\d]+$/;
+
+/**
+ * @ignore
+ */
 const quotedEmailUser = /^([\s\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e]|(\\[\x01-\x09\x0b\x0c\x0d-\x7f]))*$/i;
+
+/**
+ * @ignore
+ */
 const emailUserUtf8Part = /^[a-z\d!#\$%&'\*\+\-\/=\?\^_`{\|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+$/i;
+
+/**
+ * @ignore
+ */
 const quotedEmailUserUtf8 = /^([\s\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|(\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*$/i;
+
+/**
+ * @ignore
+ */
 const defaultMaxEmailLength = 254;
 
 /**
  * Validating the displayName according to RFC2822
- * @param {String} displayName
+ * @param displayName
  * @see https://tools.ietf.org/html/rfc2822#appendix-A.1.2
+ *
+ * @ignore
  */
 export const validateDisplayName = (displayName: string) => {
   const trimQuotes = displayName.match(/^"(.+)"$/i);
@@ -110,10 +146,16 @@ export const validateDisplayName = (displayName: string) => {
 };
 
 /**
+ * Checks if the input is an email or not.
+ * Gives options to check emails with display names as well.
  *
- * @param {String} email
- * @param {Object|undefined} options
- * @return {Boolean}
+ * @example
+ * ```
+ * import {segno} from 'https://deno.land/x/segno/mod.ts';
+ *
+ * segno.isEmail('foo@bar.com'); // true
+ * segno.isEmail('multiple..dots@stillinvalid.com'); // true
+ * ```
  */
 export const isEmail = (email: string, options?: EmailOptions) => {
   assertString(email);

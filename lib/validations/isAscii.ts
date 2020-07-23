@@ -1,3 +1,4 @@
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
 const ascii = /^[\x00-\x7F]+$/;

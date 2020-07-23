@@ -1,4 +1,6 @@
+// @ts-ignore
 import { multilineRegexp } from '../helpers/multilineRegex.ts';
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
 /**

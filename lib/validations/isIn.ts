@@ -1,4 +1,6 @@
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
+// @ts-ignore
 import { toString } from '../helpers/toString.ts';
 
 //! change later

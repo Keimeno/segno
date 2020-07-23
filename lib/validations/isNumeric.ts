@@ -1,4 +1,6 @@
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
+// @ts-ignore
 import { decimal } from '../helpers/alpha.ts';
 
 const numericNoSymbols = /^[0-9]+$/;

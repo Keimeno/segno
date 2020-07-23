@@ -1,5 +1,6 @@
 /* Based on https://tools.ietf.org/html/rfc3339#section-5.6 */
 
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
 const dateFullYear = /[0-9]{4}/;

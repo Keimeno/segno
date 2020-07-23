@@ -1,3 +1,4 @@
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
 const rgbColor = /^rgb\((([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]),){2}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\)$/;

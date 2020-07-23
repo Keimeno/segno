@@ -20,6 +20,7 @@
   - https://tools.ietf.org/html/rfc7231#section-3.1.1.5
 */
 
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
 // Match simple MIME types

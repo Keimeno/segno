@@ -1,4 +1,6 @@
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
+// @ts-ignore
 import { alphanumeric } from '../helpers/alpha.ts';
 
 export const isAlphanumeric = (str: string, locale = 'en-US') => {

@@ -1,3 +1,4 @@
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
 const int = /^(?:[-+]?(?:0|[1-9][0-9]*))$/;

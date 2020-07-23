@@ -10,6 +10,7 @@
  * for more information.
  */
 
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
 /**

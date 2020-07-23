@@ -9,8 +9,11 @@ allowProtocolRelativeURLs - if set as true protocol relative URLs will be allowe
 
 */
 
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
+// @ts-ignore
 import { isIP } from './isIP.ts';
+// @ts-ignore
 import { isFQDN } from './isFQDN.ts';
 
 type URLOptions = {

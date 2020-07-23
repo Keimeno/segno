@@ -1,3 +1,4 @@
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
 const surrogatePair = /[\uD800-\uDBFF][\uDC00-\uDFFF]/;

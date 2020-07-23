@@ -1,3 +1,4 @@
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
 const isbn10Maybe = /^(?:[0-9]{9}X|[0-9]{10})$/;

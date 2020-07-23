@@ -1,4 +1,6 @@
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
+// @ts-ignore
 import { toDate } from '../helpers/toDate.ts';
 
 export const isBefore = (str: string, date = String(new Date())) => {

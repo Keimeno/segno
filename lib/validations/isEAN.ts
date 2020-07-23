@@ -8,6 +8,7 @@
  * Reference: https://en.wikipedia.org/wiki/International_Article_Number
  */
 
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
 /**

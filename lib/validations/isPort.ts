@@ -1,3 +1,4 @@
+// @ts-ignore
 import { isInt } from './isInt.ts';
 
 export const isPort = (str: string) => {

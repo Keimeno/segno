@@ -1,3 +1,4 @@
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
 let imeiRegexWithoutHypens = /^[0-9]{15}$/;

@@ -1,3 +1,4 @@
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
 // see http://isrc.ifpi.org/en/isrc-standard/code-syntax

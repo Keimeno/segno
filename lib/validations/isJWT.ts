@@ -1,4 +1,6 @@
+// @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
+// @ts-ignore
 import { isBase64 } from './isBase64.ts';
 
 export const isJWT = (str: string) => {
