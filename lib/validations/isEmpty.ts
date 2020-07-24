@@ -1,20 +1,20 @@
 // @ts-ignore
 import { assertString } from '../helpers/assertString.ts';
 
-type IsEmptyOptions = {
+type EmptyOptions = {
   ignoreWhitespace?: boolean;
 };
 
 /**
  * @ignore
  */
-const defaultIsEmptyOptions: IsEmptyOptions = {
+const defaultEmptyOptions: EmptyOptions = {
   ignoreWhitespace: false,
 };
 
-export const isEmpty = (str: string, options: IsEmptyOptions) => {
+export const isEmpty = (str: string, options?: EmptyOptions) => {
   assertString(str);
-  options = { ...defaultIsEmptyOptions, ...options };
+  options = { ...defaultEmptyOptions, ...options };
 
   return (options.ignoreWhitespace ? str.trim().length : str.length) === 0;
 };
