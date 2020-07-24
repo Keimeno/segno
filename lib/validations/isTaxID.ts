@@ -94,6 +94,9 @@ const campusPrefix = {
   },
 };
 
+/**
+ * @ignore
+ */
 const getPrefixes = (locale: string) => {
   const prefixes = [];
 
