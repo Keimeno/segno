@@ -28,6 +28,7 @@ type URLOptions = {
   disallowAuth?: boolean;
   hostWhitelist?: boolean;
   hostBlacklist?: boolean;
+  validateLength?: boolean;
 };
 
 /**
@@ -42,6 +43,7 @@ const defaultURLOptions = {
   allowUnderscores: false,
   allowTrailingDot: false,
   allowProtocolRelativeURLs: false,
+  validateLength: true,
 };
 
 /**
@@ -72,7 +74,7 @@ const checkHost = (host: string, matches: any) => {
 export const isURL = (url: string, options?: URLOptions) => {
   assertString(url);
 
-  if (!url || url.length >= 2083 || /[\s<>]/.test(url)) {
+  if (!url || /[\s<>]/.test(url)) {
     return false;
   }
 
@@ -84,6 +86,10 @@ export const isURL = (url: string, options?: URLOptions) => {
     ...defaultURLOptions,
     ...options,
   };
+
+  if (options.validateLength && url.length >= 2083) {
+    return false;
+  }
 
   let protocol, auth, host, hostname, port, port_str, split, ipv6;
 
