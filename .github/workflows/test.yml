@@ -21,4 +21,5 @@ jobs:
         with:
           deno-version: ${{ matrix.deno }}
       - run: |
+          deno --version
           deno test
