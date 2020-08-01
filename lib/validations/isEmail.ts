@@ -150,7 +150,7 @@ export const validateDisplayName = (displayName: string) => {
  * Gives options to check emails with display names as well.
  *
  * @example
- * ```
+ * ```ts
  * import {segno} from 'https://deno.land/x/segno/mod.ts';
  *
  * segno.isEmail('foo@bar.com'); // true
