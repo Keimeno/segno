@@ -13,7 +13,8 @@ jobs:
     strategy:
       matrix:
         deno: ['v1.2.0', 'vx']
-    name: Deno ${{ matrix.deno }} testing
+        version_names: ['v1.2.0', 'latest']
+    name: Deno ${{ matrix.version_names }} testing
     steps:
       - uses: actions/checkout@v2
       - name: Setup Deno
