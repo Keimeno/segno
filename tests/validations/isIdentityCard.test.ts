@@ -44,6 +44,11 @@ Deno.test('should validate identity cards', () => {
       ],
     },
     {
+      locale: 'IT',
+      valid: ['CR43675TM', 'CA79382RA'],
+      invalid: ['CA00000AA', 'CB2342TG', 'CS123456A', 'C1236EC'],
+    },
+    {
       locale: 'NO',
       valid: [
         '09053426694',

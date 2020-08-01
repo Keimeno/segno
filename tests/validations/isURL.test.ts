@@ -301,3 +301,15 @@ Deno.test(
     });
   }
 );
+
+Deno.test('should allow user to skip URL length validation', () => {
+  test({
+    validator: 'isURL',
+    args: [{ validateLength: false }],
+    valid: [
+      'http://foobar.com/f',
+      `http://foobar.com/${new Array(2083).join('f')}`,
+    ],
+    invalid: [],
+  });
+});

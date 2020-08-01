@@ -107,6 +107,11 @@ const validators = {
 
     return c === 0;
   },
+  IT: (str: string) => {
+    if (str.length !== 9) return false;
+    if (str === 'CA00000AA') return false; // https://it.wikipedia.org/wiki/Carta_d%27identit%C3%A0_elettronica_italiana
+    return str.search(/C[A-Z]\d{5}[A-Z]{2}/is) > -1;
+  },
   NO: (str: string) => {
     const sanitized = str.trim();
     if (isNaN(Number(sanitized))) return false;

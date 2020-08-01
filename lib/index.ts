@@ -64,6 +64,7 @@ export * from './validations/isRgbColor.ts';
 export * from './validations/isSemVer.ts';
 export * from './validations/isSlug.ts';
 export * from './validations/isSurrogatePair.ts';
+export * from './validations/isSvg.ts';
 export * from './validations/isTaxID.ts';
 export * from './validations/isURL.ts';
 export * from './validations/isUUID.ts';
