@@ -190,7 +190,7 @@ Deno.test('should validate identity cards', () => {
     },
   ];
 
-  let allValid: any[] = [];
+  let allValid: string[] = [];
 
   // Test fixtures
   fixtures.forEach((fixture) => {

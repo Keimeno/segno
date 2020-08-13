@@ -1769,7 +1769,7 @@ Deno.test('should validate mobile phone number', () => {
     },
   ];
 
-  let allValid: any[] = [];
+  let allValid: string[] = [];
 
   fixtures.forEach((fixture) => {
     // to be used later on for validating 'any' locale
