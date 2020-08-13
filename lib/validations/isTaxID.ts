@@ -10,7 +10,7 @@
  * for more information.
  */
 
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { assertString } from '../helpers/assertString.ts';
 
 /**

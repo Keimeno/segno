@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { assertString } from '../helpers/assertString.ts';
 
 // supports Bech32 addresses

@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { assertString } from '../helpers/assertString.ts';
 
 type PhoneLocale =
@@ -230,7 +230,7 @@ export const isMobilePhone = (
       // https://github.com/gotwarlost/istanbul/blob/master/ignoring-code-for-coverage.md#ignoring-code-for-coverage-purposes
       // istanbul ignore else
       if (phones.hasOwnProperty(key)) {
-        // @ts-ignore
+        // @ts-ignore allowing typedoc to build
         const phone = phones[key];
         if (phone.test(str)) {
           return true;
@@ -239,14 +239,14 @@ export const isMobilePhone = (
       return false;
     });
   } else if (locale in phones) {
-    // @ts-ignore
+    // @ts-ignore allowing typedoc to build
     return phones[locale].test(str);
     // alias falsey locale as 'any'
   } else if (!locale || locale === 'any') {
     for (const key in phones) {
       // istanbul ignore else
       if (phones.hasOwnProperty(key)) {
-        // @ts-ignore
+        // @ts-ignore allowing typedoc to build
         const phone = phones[key];
         if (phone.test(str)) {
           return true;

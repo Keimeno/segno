@@ -1,6 +1,6 @@
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { assertString } from '../helpers/assertString.ts';
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { isHexadecimal } from './isHexadecimal.ts';
 
 export const isMongoId = (str: string) => {

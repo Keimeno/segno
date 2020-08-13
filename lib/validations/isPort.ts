@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { isInt } from './isInt.ts';
 
 export const isPort = (str: string) => {

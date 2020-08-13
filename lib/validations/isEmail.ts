@@ -1,10 +1,10 @@
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { assertString } from '../helpers/assertString.ts';
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { isByteLength } from './isByteLength.ts';
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { isFQDN } from './isFQDN.ts';
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { isIP } from './isIP.ts';
 
 type EmailOptions = {

@@ -1,6 +1,6 @@
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { multilineRegexp } from '../helpers/multilineRegex.ts';
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { assertString } from '../helpers/assertString.ts';
 
 /**

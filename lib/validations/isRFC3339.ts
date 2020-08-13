@@ -1,6 +1,6 @@
 /* Based on https://tools.ietf.org/html/rfc3339#section-5.6 */
 
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { assertString } from '../helpers/assertString.ts';
 
 /**

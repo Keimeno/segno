@@ -9,11 +9,11 @@ allowProtocolRelativeURLs - if set as true protocol relative URLs will be allowe
 
 */
 
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { assertString } from '../helpers/assertString.ts';
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { isIP } from './isIP.ts';
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { isFQDN } from './isFQDN.ts';
 
 type URLOptions = {

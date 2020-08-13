@@ -8,7 +8,7 @@
  * Reference: https://en.wikipedia.org/wiki/International_Article_Number
  */
 
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { assertString } from '../helpers/assertString.ts';
 
 /**

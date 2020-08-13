@@ -1,6 +1,6 @@
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { assertString } from '../helpers/assertString.ts';
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { includes } from '../helpers/includes.ts';
 
 // from https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2

@@ -1,6 +1,6 @@
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { assertString } from '../helpers/assertString.ts';
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { toDate } from '../helpers/toDate.ts';
 
 export const isAfter = (str: string, date = String(new Date())) => {

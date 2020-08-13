@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { assertString } from '../helpers/assertString.ts';
 
 /**
@@ -135,17 +135,17 @@ const hasValidIbanChecksum = (str: string) => {
   const rearranged = strippedStr.slice(4) + strippedStr.slice(0, 4);
   const alphaCapsReplacedWithDigits = rearranged.replace(
     /[A-Z]/g,
-    // @ts-ignore
+    // @ts-ignore allowing typedoc to build
     (char) => char.charCodeAt(0) - 55
   );
 
-  // @ts-ignore
+  // @ts-ignore allowing typedoc to build
   const remainder = alphaCapsReplacedWithDigits
     .match(/\d{1,7}/g)
-    // @ts-ignore
+    // @ts-ignore allowing typedoc to build
     .reduce((acc, value) => Number(acc + value) % 97, '');
 
-  // @ts-ignore
+  // @ts-ignore allowing typedoc to build
   return remainder === 1;
 };
 
