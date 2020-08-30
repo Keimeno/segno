@@ -1606,6 +1606,29 @@ Deno.test('should validate mobile phone number', () => {
       ],
     },
     {
+      locale: 'uz-UZ',
+      valid: [
+        '+998664835244',
+        '998664835244',
+        '664835244',
+        '+998957124555',
+        '998957124555',
+        '957124555',
+      ],
+      invalid: [
+        '+998644835244',
+        '998644835244',
+        '644835244',
+        '+99664835244',
+        'ASDFGJKLmZXJtZtesting123',
+        '123456789',
+        '870123456',
+        '',
+        '+998',
+        '998',
+      ],
+    },
+    {
       locale: 'da-DK',
       valid: [
         '12345678',
@@ -1769,7 +1792,7 @@ Deno.test('should validate mobile phone number', () => {
     },
   ];
 
-  let allValid: any[] = [];
+  let allValid: string[] = [];
 
   fixtures.forEach((fixture) => {
     // to be used later on for validating 'any' locale

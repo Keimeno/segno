@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { assertString } from '../helpers/assertString.ts';
 
 /**
@@ -31,13 +31,13 @@ export const isInt = (str: string, options?: IntOptions) => {
       : intLeadingZeroes;
 
   // Check min/max/lt/gt
-  // @ts-ignore
+  // @ts-ignore allowing typedoc to build
   const minCheckPassed = !options.hasOwnProperty('min') || +str >= options.min;
-  // @ts-ignore
+  // @ts-ignore allowing typedoc to build
   const maxCheckPassed = !options.hasOwnProperty('max') || +str <= options.max;
-  // @ts-ignore
+  // @ts-ignore allowing typedoc to build
   const ltCheckPassed = !options.hasOwnProperty('lt') || +str < options.lt;
-  // @ts-ignore
+  // @ts-ignore allowing typedoc to build
   const gtCheckPassed = !options.hasOwnProperty('gt') || +str > options.gt;
 
   return (

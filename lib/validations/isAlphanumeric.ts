@@ -1,6 +1,6 @@
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { assertString } from '../helpers/assertString.ts';
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { alphanumeric } from '../helpers/alpha.ts';
 
 export const isAlphanumeric = (str: string, locale = 'en-US') => {

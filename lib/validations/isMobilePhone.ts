@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { assertString } from '../helpers/assertString.ts';
 
 type PhoneLocale =
@@ -197,6 +197,7 @@ const phones = {
   'th-TH': /^(\+66|66|0)\d{9}$/,
   'tr-TR': /^(\+?90|0)?5\d{9}$/,
   'uk-UA': /^(\+?38|8)?0\d{9}$/,
+  'uz-UZ': /^(\+?998)?(6[125-79]|7[1-69]|88|9\d)\d{7}$/,
   'vi-VN': /^(\+?84|0)((3([2-9]))|(5([2689]))|(7([0|6-9]))|(8([1-6|89]))|(9([0-9])))([0-9]{7})$/,
   'zh-CN': /^((\+|00)86)?1([3568][0-9]|4[579]|6[67]|7[01235678]|9[012356789])[0-9]{8}$/,
   'zh-TW': /^(\+?886\-?|0)?9\d{8}$/,
@@ -230,7 +231,7 @@ export const isMobilePhone = (
       // https://github.com/gotwarlost/istanbul/blob/master/ignoring-code-for-coverage.md#ignoring-code-for-coverage-purposes
       // istanbul ignore else
       if (phones.hasOwnProperty(key)) {
-        // @ts-ignore
+        // @ts-ignore allowing typedoc to build
         const phone = phones[key];
         if (phone.test(str)) {
           return true;
@@ -239,14 +240,14 @@ export const isMobilePhone = (
       return false;
     });
   } else if (locale in phones) {
-    // @ts-ignore
+    // @ts-ignore allowing typedoc to build
     return phones[locale].test(str);
     // alias falsey locale as 'any'
   } else if (!locale || locale === 'any') {
     for (const key in phones) {
       // istanbul ignore else
       if (phones.hasOwnProperty(key)) {
-        // @ts-ignore
+        // @ts-ignore allowing typedoc to build
         const phone = phones[key];
         if (phone.test(str)) {
           return true;

@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { assertString } from '../helpers/assertString.ts';
 
 /**
@@ -13,7 +13,7 @@ export const isISIN = (str: string) => {
   }
 
   const checksumStr = str.replace(/[A-Z]/g, (character) =>
-    // @ts-ignore
+    // @ts-ignore allowing typedoc to build
     parseInt(character, 36)
   );
 

@@ -13,7 +13,8 @@ jobs:
     strategy:
       matrix:
         deno:
-          - { version: v1.2.0, name: v1.2.0 }
+          - { version: v0.34.0, name: v0.34.0 }
+          - { version: v1.0.0, name: v1.0.0 }
           - { version: vx, name: latest }
     name: Deno ${{ matrix.deno.name }} testing
     steps:

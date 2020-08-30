@@ -182,7 +182,7 @@ Deno.test('should validate postal code', () => {
     },
   ];
 
-  let allValid: any[] = [];
+  let allValid: string[] = [];
 
   // Test fixtures
   fixtures.forEach((fixture) => {

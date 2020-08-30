@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { assertString } from '../helpers/assertString.ts';
 
 /**
@@ -55,7 +55,7 @@ const validators = {
       .slice(0, -1)
       .replace(/[X,Y,Z]/g, (char) => (charsValue as any)[char]);
 
-    // @ts-ignore
+    // @ts-ignore allowing typedoc to build
     return sanitized.endsWith(controlDigits[num % 23]);
   },
   IN: (str: string) => {
@@ -358,7 +358,7 @@ const validators = {
     if (!/^[A-Z][0-9]{9}$/.test(sanitized)) return false;
 
     return Array.from(sanitized).reduce(
-      // @ts-ignore
+      // @ts-ignore allowing typedoc to build
       (sum, number, index) => {
         if (index === 0) {
           const code = (ALPHABET_CODES as any)[number];

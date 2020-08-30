@@ -1,6 +1,6 @@
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { assertString } from '../helpers/assertString.ts';
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { toFloat } from '../helpers/toFloat.ts';
 
 export const isDivisibleBy = (str: string, num: string) => {

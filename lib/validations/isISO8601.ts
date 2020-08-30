@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-ignore allowing typedoc to build
 import { assertString } from '../helpers/assertString.ts';
 
 // from http://goo.gl/0ejHHW
@@ -25,7 +25,7 @@ const isValidDate = (str: string) => {
     return oDay <= 365;
   }
 
-  // @ts-ignore
+  // @ts-ignore allowing typedoc to build
   const match = str.match(/(\d{4})-?(\d{0,2})-?(\d*)/).map(Number);
   const year = match[1];
   const month = match[2];
