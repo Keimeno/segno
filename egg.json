@@ -1,7 +1,7 @@
 {
   "name": "segno",
   "description": "segno (Segnosaurus). Validation library for Deno. Enforcing a high security standard.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "unlisted": false,
   "stable": true,
   "entry": "./mod.ts",
